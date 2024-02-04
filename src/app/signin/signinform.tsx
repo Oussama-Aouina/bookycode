@@ -1,6 +1,6 @@
 export default function SigninForm(props: { children: React.ReactNode }) {
     return (
-        <div className="flex w-1/2 max-w-[435px] flex-col flex-wrap content-center justify-center whitespace-nowrap rounded-[30px] bg-neutral-100 bg-opacity-60 px-6 py-6 text-lg font-medium text-red-900 shadow-sm backdrop-blur-[27.5px]">
+        <div className="flex w-full flex-col flex-wrap content-center justify-center whitespace-nowrap rounded-md bg-neutral-100 bg-opacity-60 px-6 py-6 text-lg font-medium text-red-900 shadow-sm backdrop-blur-[27.5px] lg:max-w-[435px] lg:rounded-[30px]">
             <label>username:</label>
             <input
                 name="username"
