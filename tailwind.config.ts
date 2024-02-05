@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        linearred: "#C64F49",
+      },
       backgroundColor: {
         primary: "#EAE7E7",
       },
