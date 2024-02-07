@@ -1,4 +1,4 @@
-export default function SigninForm(props: { children: React.ReactNode }) {
+export default function SigninForm() {
     return (
         <div className="flex flex-col flex-wrap content-center justify-center whitespace-nowrap rounded-md bg-neutral-100 bg-opacity-60 px-6 py-6 text-lg font-medium text-red-900 shadow-sm backdrop-blur-[27.5px]  sm:max-w-[435px] sm:rounded-[30px]">
             <label>username:</label>
