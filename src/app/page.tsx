@@ -16,7 +16,7 @@ export default function Home() {
                     alt="Logo"
                     // width={400}
                     // height={400}
-                    objectFit="contain"
+
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                 />
