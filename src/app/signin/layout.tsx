@@ -7,8 +7,8 @@ export default function SigninLayout({
     children: React.ReactNode;
 }) {
     return (
-        <main className="flex h-screen w-full flex-col items-center justify-center  bg-primary p-4 sm:p-24">
-            <Image src={logo} alt="Booky" width={150} height={150} />
+        <main className="flex h-screen w-full flex-col items-center justify-center  bg-primary p-4 ">
+            <Image src={logo} alt="Booky" width={150} height={150} priority />
             {children}
         </main>
     );
