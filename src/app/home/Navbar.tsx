@@ -6,7 +6,7 @@ import { IoPersonCircle } from 'react-icons/io5';
 
 export default function Navbar() {
     return (
-        <nav className="sticky z-20 flex w-full items-center justify-between bg-slate-100 bg-opacity-20 px-6 py-2 backdrop:blur-lg">
+        <nav className="sticky z-20 flex w-full items-center justify-between  px-6 pb-1 pt-2 backdrop:blur-lg">
             <Image src={logo} alt="logo" width={110} height={110} />
             <ul className=" flex  items-center justify-center gap-10 font-medium max-md:hidden">
                 <li className="mr-2">
@@ -31,7 +31,10 @@ export default function Navbar() {
                         href="/signin"
                         className="cursor-pointer text-red-900"
                     >
-                        <IoPersonCircle size={40} />
+                        <IoPersonCircle
+                            size={45}
+                            className="drop-shadow-icon bg-clip-text"
+                        />
                     </Link>
                 </li>
             </ul>
