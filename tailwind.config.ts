@@ -15,6 +15,9 @@ const config: Config = {
           "0 45px 65px rgba(0, 0, 0, 0.15)",
         ],
       },
+      boxShadow: {
+        pop: "1px 2px 3px 1px rgba(0, 0, 0, 0.15)",
+      },
       colors: {
         linearred: "#C64F49",
       },

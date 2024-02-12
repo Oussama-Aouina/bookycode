@@ -1,14 +1,19 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../../public/logo/booky.png';
 import { IoMenu } from 'react-icons/io5';
 import { IoPersonCircle } from 'react-icons/io5';
+import ProfilePopup from './ProfilePopup';
+import { useState } from 'react';
 
 export default function Navbar() {
+    const [popupopen, setPopupopen] = useState<true | false>(false);
     return (
         <nav className="sticky z-20 flex w-full items-center justify-between  px-6 pb-1 pt-2 backdrop:blur-lg">
             <Image src={logo} alt="logo" width={110} height={110} />
-            <ul className=" flex  items-center justify-center gap-10 font-medium max-md:hidden">
+            <ul className=" relative  flex items-center justify-center gap-10 font-medium max-md:hidden">
                 <li className="mr-2">
                     <Link href="#mybooks">my books 📚 </Link>
                 </li>
@@ -27,16 +32,15 @@ export default function Navbar() {
                     <Link href="#contact">contact </Link>
                 </li>
                 <li>
-                    <Link
-                        href="/signin"
-                        className="cursor-pointer text-red-900"
-                    >
-                        <IoPersonCircle
-                            size={45}
-                            className="drop-shadow-icon bg-clip-text"
-                        />
-                    </Link>
+                    <IoPersonCircle
+                        size={45}
+                        className="drop-shadow-icon cursor-pointer bg-clip-text text-red-900"
+                        onClick={() => {
+                            setPopupopen(!popupopen);
+                        }}
+                    />
                 </li>
+                {popupopen && <ProfilePopup />}
             </ul>
             <IoMenu size={40} className="hidden text-red-800 max-md:block" />
         </nav>
