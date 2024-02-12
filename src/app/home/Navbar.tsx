@@ -12,9 +12,11 @@ export default function Navbar() {
     const [popupopen, setPopupopen] = useState<true | false>(false);
     return (
         <nav className="sticky z-20 flex w-full items-center justify-between  px-6 pb-1 pt-2 backdrop:blur-lg">
-            <Image src={logo} alt="logo" width={110} height={110} />
-            <ul className=" relative  flex items-center justify-center gap-10 font-medium max-md:hidden">
-                <li className="mr-2">
+            <Link href="/">
+                <Image src={logo} alt="logo" width={110} height={110} />
+            </Link>
+            <ul className=" relative  flex items-center justify-center gap-7 font-medium max-md:hidden">
+                <li>
                     <Link href="#mybooks">my books 📚 </Link>
                 </li>
                 <li>
@@ -34,7 +36,7 @@ export default function Navbar() {
                 <li>
                     <IoPersonCircle
                         size={45}
-                        className="drop-shadow-icon cursor-pointer bg-clip-text text-red-900"
+                        className=" cursor-pointer rounded-full bg-clip-text text-red-900 shadow-md"
                         onClick={() => {
                             setPopupopen(!popupopen);
                         }}

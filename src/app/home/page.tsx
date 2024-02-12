@@ -1,6 +1,6 @@
 export default function HomePage() {
     return (
-        <div className="flex w-full flex-col items-center">
+        <div className="pointer-events-none mt-9 flex w-full flex-col items-center">
             <h1 className="text-4xl font-bold text-gray-800">
                 Welcome to the home page
             </h1>
