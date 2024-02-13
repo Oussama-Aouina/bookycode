@@ -1,9 +1,9 @@
-export default function HomePage() {
+import FirstSection from './FirstSection';
+
+export default function HomePage({ children }: { children?: React.ReactNode }) {
     return (
-        <div className="pointer-events-none mt-9 flex w-full flex-col items-center">
-            <h1 className="text-4xl font-bold text-gray-800">
-                Welcome to the home page
-            </h1>
+        <div className="flex w-full flex-col items-center">
+            <FirstSection />
             <div className="mt-8">
                 <h2 className="text-2xl font-semibold text-gray-700">
                     User Profile
