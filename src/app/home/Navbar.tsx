@@ -7,9 +7,11 @@ import { IoMenu } from 'react-icons/io5';
 import { IoPersonCircle } from 'react-icons/io5';
 import ProfilePopup from './ProfilePopup';
 import { useState } from 'react';
+import MobileSideBar from './MobileSideBar';
 
 export default function Navbar() {
     const [popupopen, setPopupopen] = useState<true | false>(false);
+    const [sidebar, setSidebar] = useState<true | false>(false);
     return (
         <nav className="sticky z-20 flex w-full items-center justify-between  px-6 pb-1 pt-2 backdrop:blur-lg">
             <Link href="/">
@@ -44,7 +46,14 @@ export default function Navbar() {
                 </li>
                 {popupopen && <ProfilePopup />}
             </ul>
-            <IoMenu size={40} className="hidden text-red-800 max-md:block" />
+            <IoMenu
+                size={40}
+                className="hidden text-red-800 max-md:block"
+                onClick={() => {
+                    setSidebar(!sidebar);
+                }}
+            />
+            {sidebar && <MobileSideBar />}
         </nav>
     );
 }
