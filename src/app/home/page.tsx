@@ -2,7 +2,7 @@ import FirstSection from './FirstSection';
 
 export default function HomePage({ children }: { children?: React.ReactNode }) {
     return (
-        <div className="flex w-full flex-col items-center">
+        <div className="flex min-h-screen w-full flex-col items-center">
             <FirstSection />
             <div className="mt-8">
                 <h2 className="text-2xl font-semibold text-gray-700">

@@ -9,11 +9,14 @@ import ProfilePopup from './ProfilePopup';
 import { useState } from 'react';
 import MobileSideBar from './MobileSideBar';
 
-export default function Navbar() {
+export default function Navbar(): JSX.Element {
     const [popupopen, setPopupopen] = useState<true | false>(false);
     const [sidebar, setSidebar] = useState<true | false>(false);
+    function handleSideBar() {
+        setSidebar(!sidebar);
+    }
     return (
-        <nav className="sticky z-20 flex w-full items-center justify-between  px-6 pb-1 pt-2 backdrop:blur-lg">
+        <nav className="sticky z-20 flex h-full w-full items-center justify-between px-6 pb-1 pt-2 backdrop:blur-lg">
             <Link href="/">
                 <Image src={logo} alt="logo" width={110} height={110} />
             </Link>
@@ -48,12 +51,10 @@ export default function Navbar() {
             </ul>
             <IoMenu
                 size={40}
-                className="hidden text-red-800 max-md:block"
-                onClick={() => {
-                    setSidebar(!sidebar);
-                }}
+                className="hidden cursor-pointer text-red-800 max-md:block"
+                onClick={handleSideBar}
             />
-            {sidebar && <MobileSideBar />}
+            {sidebar && <MobileSideBar open={handleSideBar} />}
         </nav>
     );
 }
