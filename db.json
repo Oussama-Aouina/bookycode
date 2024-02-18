@@ -1,0 +1,29 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "oussama",
+      "email": "oussamaaouina99@gmail.com",
+      "password": "oussama123",
+      "picture": ""
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "ownerId": 1,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "description": "The Alchemist is a novel by Brazilian author Paulo Coelho that was first published in 1988. Originally written in Portuguese, it became a widely translated international bestseller. An allegorical novel, The Alchemist follows a young Andalusian shepherd in his journey to the pyramids of Egypt, after having a recurring dream of finding a treasure there.",
+      "picture": ""
+    },
+    {
+      "id": 2,
+      "ownerId": 1,
+      "title": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "description": "The Da Vinci Code is a 2003 mystery thriller novel by Dan Brown. It is Brown's second novel to include the character Robert Langdon: the first was his 2000 novel Angels & Demons. The Da Vinci Code follows symbologist Robert Langdon and cryptologist Sophie Neveu after a",
+      "picture": ""
+    }
+  ]
+}
