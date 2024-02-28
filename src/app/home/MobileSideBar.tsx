@@ -4,7 +4,7 @@ import React from 'react';
 import { IoLogOutOutline } from 'react-icons/io5';
 function MobileSideBar({ open }: { open: Function }): JSX.Element {
     return (
-        <div className="absolute right-0 top-0 z-30 flex hidden h-screen w-1/2 flex-col items-start  justify-around rounded-xl  bg-primary px-4 py-3.5 text-xl font-medium text-zinc-800 shadow-md max-md:block">
+        <div className="absolute right-0 top-0 z-30 hidden h-screen w-1/2 flex-col items-center justify-around  rounded-xl bg-primary  px-4 py-3.5 text-xl font-medium text-zinc-800 shadow-md max-md:flex ">
             <div className="mb-10 w-full items-center justify-end  border-b-2 border-gray-500 border-opacity-20 p-2">
                 <button
                     className="text-xl font-medium text-red-900 "
@@ -14,7 +14,7 @@ function MobileSideBar({ open }: { open: Function }): JSX.Element {
                 </button>
             </div>
             <div className="mb-4 flex items-center justify-center">
-                <ul className="flex flex-col items-start justify-center gap-6">
+                <ul className="flex flex-col items-start justify-center gap-6 border  p-4">
                     <li>
                         <Link href="#mybooks">my books 📚 </Link>
                     </li>
@@ -32,10 +32,6 @@ function MobileSideBar({ open }: { open: Function }): JSX.Element {
                     <li>
                         <Link href="#contact">contact </Link>
                     </li>
-                </ul>
-            </div>
-            <div className="flex items-start justify-center">
-                <ul className="flex flex-col items-start justify-center gap-6">
                     <li>
                         <Link href="/">edit account</Link>
                     </li>
@@ -44,6 +40,7 @@ function MobileSideBar({ open }: { open: Function }): JSX.Element {
                     </li>
                 </ul>
             </div>
+
             <div className="flex items-start justify-center">
                 <Link
                     href="/"
