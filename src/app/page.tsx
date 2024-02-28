@@ -16,14 +16,13 @@ export default function Home() {
                     alt="Logo"
                     // width={400}
                     // height={400}
-
-                    loading="lazy"
+                    priority
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                 />
             </div>
 
             <div className="flex items-center ">
-                <Link href={'/signin'} className="mr-3">
+                <Link href={'/auth/signin'} className="mr-3">
                     <div className="mr-4 flex items-center justify-center gap-20 rounded-md bg-red-500 bg-opacity-70 px-4 py-2 text-xl font-medium text-white hover:bg-opacity-80 md:px-7">
                         Login
                         <GoPerson size={25} className="row-span-4" />
