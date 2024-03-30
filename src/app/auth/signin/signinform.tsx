@@ -1,4 +1,4 @@
-import Password from '../shared_components/password';
+import Password from '../_shared_components/password';
 
 export default function SigninForm() {
     return (

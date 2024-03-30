@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { MdContactPage } from 'react-icons/md';
 import { LiaEyeSlash } from 'react-icons/lia';
 import { LiaEye } from 'react-icons/lia';
-import Password from '../shared_components/password';
+import Password from '../_shared_components/password';
 
 export default function SignupForm() {
     return (
